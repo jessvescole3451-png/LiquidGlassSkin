@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  skins.xml — Índice de variantes disponibles en este APK
+  El usuario elige en: Poweramp → Ajustes → Apariencia → Skin
+-->
+<skins>
+
+    <!-- VARIANTE 1: Colores dinámicos (Material You + álbum) -->
+    <skin
+        name="@string/skin_name"
+        description="@string/skin_description"
+        author="@string/skin_author"
+        style="@style/LiquidGlassSkin"/>
+
+    <!-- VARIANTE 2: Blanco y Negro puro -->
+    <skin
+        name="@string/skin_name_bw"
+        description="@string/skin_description_bw"
+        author="@string/skin_author"
+        style="@style/LiquidGlassBWSkin"/>
+
+</skins>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Variante dinámica -->
+    <string name="skin_name">Liquid Glass — Dynamic</string>
+    <string name="skin_description">Colores dinámicos: Material You + colores del álbum</string>
+    <string name="skin_author">Liquid Glass Team</string>
+
+    <!-- Variante B&amp;W -->
+    <string name="skin_name_bw">Liquid Glass — Black &amp; White</string>
+    <string name="skin_description_bw">Cristal translúcido sobre negro puro. Sin colores.</string>
+
+    <!-- UI de la actividad -->
+    <string name="btn_open_poweramp">Abrir Poweramp</string>
+    <string name="choose_variant">Elige una variante:</string>
+    <string name="variant_dynamic">🎨 Liquid Glass Dynamic</string>
+    <string name="variant_bw">⚫ Liquid Glass B&amp;W</string>
+</resources>

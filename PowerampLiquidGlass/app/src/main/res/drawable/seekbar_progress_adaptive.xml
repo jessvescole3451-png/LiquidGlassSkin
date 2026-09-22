@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de progreso: usa colorPrimary adaptativo -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <!-- colorPrimary = adaptativo: oscuro si fondo claro, claro si fondo oscuro -->
+            <solid android:color="?attr/colorPrimary"/>
+        </shape>
+    </item>
+</layer-list>

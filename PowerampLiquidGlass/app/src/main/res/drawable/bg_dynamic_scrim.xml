@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Fondo dinámico con scrim oscuro encima
+  El color real viene de Material You o de los colores del álbum
+  que Poweramp inyecta en ?attr/colorSurface / colorPrimary.
+  
+  El scrim oscuro al 55% asegura que el cristal blanco encima
+  siempre se vea bien sin importar qué color venga del álbum.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Capa base: color dinámico de Material You / álbum -->
+    <!-- Poweramp reemplaza este color automáticamente con AAA -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorSurface"/>
+        </shape>
+    </item>
+    <!-- Scrim oscuro encima: garantiza contraste para el cristal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#8C000000"/>
+        </shape>
+    </item>
+</layer-list>

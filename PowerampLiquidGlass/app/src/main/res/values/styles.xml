@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ════════════════════════════════════════════════════════════════
+  LIQUID GLASS B&W — Estilo Blanco y Negro
+  ════════════════════════════════════════════════════════════════
+  · Fondo: negro puro #000000
+  · Cristal: blanco semitransparente (igual que la variante dinámica
+    pero sin ningún color — solo blanco, gris y negro)
+  · Texto: SIEMPRE blanco (fondo siempre es negro, sin riesgo)
+  · Sin AAA (colores del álbum desactivados)
+  · Sin Material You (colores del sistema ignorados)
+  · Resultado: cristal blanco flotando sobre abismo negro — siempre
+  ════════════════════════════════════════════════════════════════
+-->
+<resources>
+
+    <!-- ─────────────────────────────────────────────────────────
+         App theme (para la actividad de lanzamiento)
+    ──────────────────────────────────────────────────────────── -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar"/>
+
+    <!-- ─────────────────────────────────────────────────────────
+         VARIANTE DINÁMICA (Material You + álbum)
+    ──────────────────────────────────────────────────────────── -->
+    <style name="LiquidGlassSkin" parent="@style/PowerampSkinStyle">
+
+        <item name="skin_background">@drawable/bg_dynamic_scrim</item>
+        <item name="skin_player_ui_bg">@drawable/bg_dynamic_scrim</item>
+        <item name="skin_window_background">@drawable/bg_dynamic_scrim</item>
+
+        <!-- Colores del álbum ACTIVADOS -->
+        <item name="skin_aaa_enabled">true</item>
+        <item name="skin_aaa_color_weight">0.85</item>
+        <item name="skin_aaa_mode">full</item>
+
+        <!-- Texto adaptativo (Material You calcula contraste) -->
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textColorHint">?attr/colorOutline</item>
+        <item name="skin_text_color_primary">?attr/colorOnSurface</item>
+        <item name="skin_text_color_secondary">?attr/colorOnSurfaceVariant</item>
+
+        <!-- Iconos adaptativos -->
+        <item name="skin_icon_color">?attr/colorOnSurface</item>
+        <item name="skin_icon_color_active">?attr/colorPrimary</item>
+        <item name="skin_icon_color_inactive">?attr/colorOutline</item>
+
+        <!-- Cristal -->
+        <item name="skin_header_bg">@drawable/glass_panel_rounded</item>
+        <item name="skin_bottom_bg">@drawable/glass_panel_bottom</item>
+        <item name="skin_nav_bar_bg">@drawable/glass_panel_rounded</item>
+        <item name="skin_list_item_bg">@drawable/glass_list_item</item>
+        <item name="skin_popup_bg">@drawable/glass_popup</item>
+        <item name="skin_eq_bg">@drawable/glass_panel_rounded</item>
+
+        <!-- Portada -->
+        <item name="skin_album_art_bg">@drawable/glass_circle_frame</item>
+        <item name="skin_aa_ovrly">@drawable/glass_overlay_ring</item>
+
+        <!-- Progreso adaptativo -->
+        <item name="skin_seekbar_bg">@drawable/seekbar_track_glass</item>
+        <item name="skin_seekbar_progress">@drawable/seekbar_progress_adaptive</item>
+        <item name="skin_seekbar_thumb">@drawable/seekbar_thumb_adaptive</item>
+        <item name="skin_seekbar_secondary">?attr/colorSurfaceVariant</item>
+        <item name="skin_progress_time_color">?attr/colorOnSurfaceVariant</item>
+
+        <!-- Botones -->
+        <item name="skin_button_play_bg">@drawable/btn_play_glass</item>
+        <item name="skin_button_pause_bg">@drawable/btn_play_glass</item>
+        <item name="skin_button_prev_bg">@drawable/btn_control_glass</item>
+        <item name="skin_button_next_bg">@drawable/btn_control_glass</item>
+        <item name="skin_button_shuffle_bg">@drawable/btn_ghost_glass</item>
+        <item name="skin_button_repeat_bg">@drawable/btn_ghost_glass</item>
+
+        <!-- Navegación -->
+        <item name="skin_nav_icon_color">?attr/colorOnSurfaceVariant</item>
+        <item name="skin_nav_icon_color_active">?attr/colorPrimary</item>
+
+        <!-- Listas -->
+        <item name="skin_list_separator_color">?attr/colorOutlineVariant</item>
+        <item name="skin_list_header_text_color">?attr/colorOnSurfaceVariant</item>
+        <item name="skin_popup_item_text_color">?attr/colorOnSurface</item>
+
+        <!-- Ripple -->
+        <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
+    </style>
+
+    <!-- ─────────────────────────────────────────────────────────
+         VARIANTE B&W — BLANCO Y NEGRO PURO
+         Sin colores del álbum, sin Material You
+         Solo negro, blanco y cristal translúcido
+    ──────────────────────────────────────────────────────────── -->
+    <style name="LiquidGlassBWSkin" parent="@style/PowerampSkinStyle">
+
+        <!-- FONDO: negro puro absoluto -->
+        <item name="skin_background">@drawable/bg_pure_black</item>
+        <item name="skin_player_ui_bg">@drawable/bg_pure_black</item>
+        <item name="skin_window_background">@drawable/bg_pure_black</item>
+
+        <!-- Sin colores del álbum -->
+        <item name="skin_aaa_enabled">false</item>
+
+        <!-- TEXTOS: siempre blancos — fondo negro garantiza legibilidad
+             Sin riesgo de blanco sobre blanco porque el fondo
+             es negro fijo, no dinámico -->
+        <item name="android:textColorPrimary">#FFFFFFFF</item>
+        <item name="android:textColorSecondary">#CCFFFFFF</item>
+        <item name="android:textColorHint">#66FFFFFF</item>
+        <item name="skin_text_color_primary">#FFFFFFFF</item>
+        <item name="skin_text_color_secondary">#CCFFFFFF</item>
+
+        <!-- ICONOS: blancos sobre negro -->
+        <item name="skin_icon_color">#FFFFFFFF</item>
+        <item name="skin_icon_color_active">#FFFFFFFF</item>
+        <item name="skin_icon_color_inactive">#66FFFFFF</item>
+
+        <!-- PANELES DE CRISTAL: blanco translúcido sobre negro -->
+        <item name="skin_header_bg">@drawable/glass_panel_rounded</item>
+        <item name="skin_bottom_bg">@drawable/glass_panel_bottom</item>
+        <item name="skin_nav_bar_bg">@drawable/glass_panel_bw_nav</item>
+        <item name="skin_list_item_bg">@drawable/glass_list_item_bw</item>
+        <item name="skin_popup_bg">@drawable/glass_popup_bw</item>
+        <item name="skin_eq_bg">@drawable/glass_panel_rounded</item>
+
+        <!-- PORTADA: marco de cristal con anillo blanco brillante -->
+        <item name="skin_album_art_bg">@drawable/glass_circle_frame_bw</item>
+        <item name="skin_aa_ovrly">@drawable/glass_overlay_ring_bw</item>
+
+        <!-- BARRA DE PROGRESO: blanca sobre gris oscuro -->
+        <item name="skin_seekbar_bg">@drawable/seekbar_track_bw</item>
+        <item name="skin_seekbar_progress">@drawable/seekbar_progress_bw</item>
+        <item name="skin_seekbar_thumb">@drawable/seekbar_thumb_bw</item>
+        <item name="skin_seekbar_secondary">#33FFFFFF</item>
+        <item name="skin_progress_time_color">#99FFFFFF</item>
+
+        <!-- BOTONES: mismos cristales blancos -->
+        <item name="skin_button_play_bg">@drawable/btn_play_glass_bw</item>
+        <item name="skin_button_pause_bg">@drawable/btn_play_glass_bw</item>
+        <item name="skin_button_prev_bg">@drawable/btn_control_glass</item>
+        <item name="skin_button_next_bg">@drawable/btn_control_glass</item>
+        <item name="skin_button_shuffle_bg">@drawable/btn_ghost_glass</item>
+        <item name="skin_button_repeat_bg">@drawable/btn_ghost_glass</item>
+
+        <!-- NAVEGACIÓN -->
+        <item name="skin_nav_icon_color">#99FFFFFF</item>
+        <item name="skin_nav_icon_color_active">#FFFFFFFF</item>
+
+        <!-- LISTAS -->
+        <item name="skin_list_separator_color">#22FFFFFF</item>
+        <item name="skin_list_header_text_color">#80FFFFFF</item>
+        <item name="skin_popup_item_text_color">#FFFFFFFF</item>
+
+        <!-- RIPPLE: blanco sutil -->
+        <item name="android:colorControlHighlight">#30FFFFFF</item>
+
+    </style>
+
+</resources>
